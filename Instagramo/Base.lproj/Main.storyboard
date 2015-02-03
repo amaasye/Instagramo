@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A6b-1U-Cs5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="3Tx-nc-Aw1">
             <objects>
-                <viewController id="A6b-1U-Cs5" sceneMemberID="viewController">
+                <viewController id="A6b-1U-Cs5" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U9z-8k-fqd"/>
                         <viewControllerLayoutGuide type="bottom" id="l72-ED-nEJ"/>
@@ -27,7 +27,7 @@
                                     <rect key="frame" x="181" y="285" width="38" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="loginSegue" id="20a-T8-LAx"/>
+                                    <segue destination="Q4z-2R-bG3" kind="presentation" identifier="loginSegue" id="LqW-Az-1b9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPt-ie-N17">
@@ -39,7 +39,7 @@
                                     <rect key="frame" x="176" y="332" width="49" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="tpW-LS-vH0" kind="presentation" identifier="signup" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="ELk-C9-23A"/>
+                                    <segue destination="tpW-LS-vH0" kind="presentation" identifier="signup" id="ELk-C9-23A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,12 +61,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="co2-bh-Ylo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6561" y="-3010"/>
+            <point key="canvasLocation" x="-8692.5" y="-1838"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="cYH-JS-K5Z">
             <objects>
-                <viewController id="tpW-LS-vH0" sceneMemberID="viewController">
+                <viewController id="tpW-LS-vH0" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Idx-Pw-FDR"/>
                         <viewControllerLayoutGuide type="bottom" id="7G8-Dg-rQi"/>
@@ -83,7 +83,7 @@
                                     <rect key="frame" x="177" y="285" width="46" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="signupSegue" id="JlT-HG-L1j"/>
+                                    <segue destination="Q4z-2R-bG3" kind="presentation" identifier="signupSegue" id="ejW-Xs-p9J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWg-qA-m7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5851.5" y="-3010"/>
+            <point key="canvasLocation" x="-8029.5" y="-1838"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -461,7 +461,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xy-WT-eac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8167.5" y="-1013"/>
+            <point key="canvasLocation" x="-8203.5" y="-1013"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tvP-4n-e0M">
@@ -819,6 +819,6 @@
         <image name="profile" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="20a-T8-LAx"/>
+        <segue reference="ejW-Xs-p9J"/>
     </inferredMetricsTieBreakers>
 </document>
