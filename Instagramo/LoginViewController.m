@@ -5,7 +5,7 @@
 //  Created by Syed Amaanullah on 2/2/15.
 //  Copyright (c) 2015 Syed, Kyle and JP. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
@@ -21,24 +21,38 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)onLoginButtonTapped:(UIButton *)sender {
-//    segueID: "loginSegue"
-
+    [PFUser logInWithUsernameInBackground:self.usernameTextField.text password: self.passwordTextField.text block:^(PFUser *user, NSError *error) {
+        if  (error != nil) {
+            [self showAlert];
+        }
+        //    segueID: "loginSegue"
+        [self performSegueWithIdentifier:@"loginsegue" sender:self];
+    }];
 }
 
 - (IBAction)onSignupButtonTapped:(UIButton *)sender {
-//    segueID: "signupSegue"
-    
+    PFUser* user = [PFUser user];
+    user.username = self.usernameTextField.text;
+    user.password = self.usernameTextField.text;
+    user.email = [NSString stringWithFormat:@"%@@mobilemakers.co", self.usernameTextField.text];
+
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error != nil) {
+            [self showAlert];
+        }
+        else {
+            //    segueID: "signupSegue"
+            [self performSegueWithIdentifier:@"signupsegue" sender:self];
+        }
+    }];
+}
+
+-(void)showAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry Broski" message:@"You need to create an account before you can access this awesomeness." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+
+    [alert show];
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

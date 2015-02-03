@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B047DFF21A816C11000A2B69 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B047DFF11A816C11000A2B69 /* RootViewController.m */; };
 		B0BEA71E1A803D0C00606C14 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEA71D1A803D0C00606C14 /* Parse.framework */; };
 		B0BEA7201A803D1D00606C14 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEA71F1A803D1D00606C14 /* Bolts.framework */; };
 		B0BEA7221A803D7E00606C14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEA7211A803D7E00606C14 /* AudioToolbox.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B047DFF01A816C11000A2B69 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		B047DFF11A816C11000A2B69 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		B0BEA71D1A803D0C00606C14 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B0BEA71F1A803D1D00606C14 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B0BEA7211A803D7E00606C14 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -154,6 +157,8 @@
 				B0E2BEA01A80226D00F1C101 /* FeedViewController.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
+				B047DFF01A816C11000A2B69 /* RootViewController.h */,
+				B047DFF11A816C11000A2B69 /* RootViewController.m */,
 				F9DA477B1A8045210039FB9E /* View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
@@ -309,6 +314,7 @@
 				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,
 				F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */,
+				B047DFF21A816C11000A2B69 /* RootViewController.m in Sources */,
 				F9DA47BE1A8157400039FB9E /* FeedViewController.m in Sources */,
 				F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */,
 				B0E2BE9B1A80226D00F1C101 /* main.m in Sources */,
