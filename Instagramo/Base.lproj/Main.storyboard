@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="xWH-Bt-pCI">
             <objects>
-                <viewController id="oyn-vi-KKz" sceneMemberID="viewController">
+                <viewController id="oyn-vi-KKz" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Niw-sb-lhr"/>
                         <viewControllerLayoutGuide type="bottom" id="PCO-RM-VZZ"/>
@@ -18,10 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="A6b-1U-Cs5" kind="presentation" identifier="initialSegue" id="z8I-xt-MED"/>
+                        <segue destination="Q4z-2R-bG3" kind="presentation" identifier="passInitialSegue" id="vCm-r9-jjs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4C-yF-ApZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9037.5" y="-749"/>
+            <point key="canvasLocation" x="-9805.5" y="-1013"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="3Tx-nc-Aw1">
@@ -213,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="co2-bh-Ylo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9037.5" y="-1421"/>
+            <point key="canvasLocation" x="-9037.5" y="-1753"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -719,7 +723,9 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0bC-AN-xno">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="398" id="ew4-Ln-ljh"/>
+                                    <constraint firstAttribute="height" constant="398" id="ew4-Ln-ljh">
+                                        <variation key="widthClass=compact" constant="342"/>
+                                    </constraint>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LPJ-Ia-X7g">
                                     <size key="itemSize" width="110" height="110"/>
@@ -1115,7 +1121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coB-eL-fnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5935.5" y="264"/>
+            <point key="canvasLocation" x="-5880" y="264"/>
         </scene>
         <!--Profile-->
         <scene sceneID="bOa-dn-sow">
@@ -1146,6 +1152,6 @@
         <image name="profile" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IPY-Od-c1F"/>
+        <segue reference="vCm-r9-jjs"/>
     </inferredMetricsTieBreakers>
 </document>
