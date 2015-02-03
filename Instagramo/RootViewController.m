@@ -11,14 +11,19 @@
 
 
 @interface RootViewController ()
-
 @end
 
 @implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    if ([PFUser currentUser] == nil) {
+        [self performSegueWithIdentifier:@"initialSegue" sender:self];
+    }
+    else {
+        [self performSegueWithIdentifier:@"passInitialSegue" sender:self];
+    }
 }
+
 
 @end
