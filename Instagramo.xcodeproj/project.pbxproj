@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		B0E2BE9B1A80226D00F1C101 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BE9A1A80226D00F1C101 /* main.m */; };
 		B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */; };
-		B0E2BEA11A80226D00F1C101 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BEA01A80226D00F1C101 /* ViewController.m */; };
+		B0E2BEA11A80226D00F1C101 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BEA01A80226D00F1C101 /* FeedViewController.m */; };
 		B0E2BEA41A80226D00F1C101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2BEA21A80226D00F1C101 /* Main.storyboard */; };
 		B0E2BEA61A80226D00F1C101 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E2BEA51A80226D00F1C101 /* Images.xcassets */; };
 		B0E2BEA91A80226D00F1C101 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E2BEA71A80226D00F1C101 /* LaunchScreen.xib */; };
 		B0E2BEB51A80226D00F1C101 /* InstagramoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BEB41A80226D00F1C101 /* InstagramoTests.m */; };
+		F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA477D1A8045410039FB9E /* SearchViewController.m */; };
+		F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47801A8045550039FB9E /* CameraViewController.m */; };
+		F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47831A8045780039FB9E /* ActivityViewController.m */; };
+		F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47861A80458D0039FB9E /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +36,22 @@
 		B0E2BE9A1A80226D00F1C101 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B0E2BE9F1A80226D00F1C101 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B0E2BEA01A80226D00F1C101 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0E2BE9F1A80226D00F1C101 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		B0E2BEA01A80226D00F1C101 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		B0E2BEA31A80226D00F1C101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E2BEA51A80226D00F1C101 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0E2BEA81A80226D00F1C101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B0E2BEAE1A80226D00F1C101 /* InstagramoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E2BEB31A80226D00F1C101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E2BEB41A80226D00F1C101 /* InstagramoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramoTests.m; sourceTree = "<group>"; };
+		F9DA477C1A8045410039FB9E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F9DA477D1A8045410039FB9E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F9DA477F1A8045550039FB9E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		F9DA47801A8045550039FB9E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		F9DA47821A8045780039FB9E /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		F9DA47831A8045780039FB9E /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		F9DA47851A80458D0039FB9E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		F9DA47861A80458D0039FB9E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +95,7 @@
 			children = (
 				B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */,
 				B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */,
-				B0E2BE9F1A80226D00F1C101 /* ViewController.h */,
-				B0E2BEA01A80226D00F1C101 /* ViewController.m */,
+				F9DA477B1A8045210039FB9E /* View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
 				B0E2BEA71A80226D00F1C101 /* LaunchScreen.xib */,
@@ -117,6 +128,23 @@
 				B0E2BEB31A80226D00F1C101 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9DA477B1A8045210039FB9E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2BE9F1A80226D00F1C101 /* FeedViewController.h */,
+				B0E2BEA01A80226D00F1C101 /* FeedViewController.m */,
+				F9DA477C1A8045410039FB9E /* SearchViewController.h */,
+				F9DA477D1A8045410039FB9E /* SearchViewController.m */,
+				F9DA477F1A8045550039FB9E /* CameraViewController.h */,
+				F9DA47801A8045550039FB9E /* CameraViewController.m */,
+				F9DA47821A8045780039FB9E /* ActivityViewController.h */,
+				F9DA47831A8045780039FB9E /* ActivityViewController.m */,
+				F9DA47851A80458D0039FB9E /* ProfileViewController.h */,
+				F9DA47861A80458D0039FB9E /* ProfileViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E2BEA11A80226D00F1C101 /* ViewController.m in Sources */,
+				F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */,
+				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
+				B0E2BEA11A80226D00F1C101 /* FeedViewController.m in Sources */,
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,
+				F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */,
+				F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */,
 				B0E2BE9B1A80226D00F1C101 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +444,7 @@
 				B0E2BEBA1A80226D00F1C101 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0E2BEBB1A80226D00F1C101 /* Build configuration list for PBXNativeTarget "InstagramoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +453,7 @@
 				B0E2BEBD1A80226D00F1C101 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
