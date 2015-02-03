@@ -8,7 +8,7 @@
 
 #import "FeedViewController.h"
 
-@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -22,23 +22,11 @@
 #pragma mark ------------ TABLEVIEW DELEGATE AND DATASOURCE ------------
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell"];
-
-    return cell;
-}
-
-#pragma mark ------------ COLLECTIONVIEW DELEGATE AND DATASOURCE ------------
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 1;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCell" forIndexPath:indexPath];
 
     return cell;
 }
