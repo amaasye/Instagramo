@@ -31,7 +31,7 @@
 		F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47801A8045550039FB9E /* CameraViewController.m */; };
 		F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47831A8045780039FB9E /* ActivityViewController.m */; };
 		F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47861A80458D0039FB9E /* ProfileViewController.m */; };
-		F9DA478D1A81230B0039FB9E /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA478C1A81230B0039FB9E /* SignupViewController.m */; };
+		F9DA47BE1A8157400039FB9E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BEA01A80226D00F1C101 /* FeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,6 @@
 		F9DA47831A8045780039FB9E /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		F9DA47851A80458D0039FB9E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		F9DA47861A80458D0039FB9E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		F9DA478B1A81230B0039FB9E /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
-		F9DA478C1A81230B0039FB9E /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +154,6 @@
 				B0E2BEA01A80226D00F1C101 /* FeedViewController.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
-				F9DA478B1A81230B0039FB9E /* SignupViewController.h */,
-				F9DA478C1A81230B0039FB9E /* SignupViewController.m */,
 				F9DA477B1A8045210039FB9E /* View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
@@ -313,8 +309,8 @@
 				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,
 				F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */,
+				F9DA47BE1A8157400039FB9E /* FeedViewController.m in Sources */,
 				F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */,
-				F9DA478D1A81230B0039FB9E /* SignupViewController.m in Sources */,
 				B0E2BE9B1A80226D00F1C101 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
