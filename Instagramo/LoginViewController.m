@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -18,11 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)onLoginButtonTapped:(UIButton *)sender {
+//    segueID: "loginSegue"
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)onSignupButtonTapped:(UIButton *)sender {
+//    segueID: "signupSegue"
+    
+}
+
 
 /*
 #pragma mark - Navigation
