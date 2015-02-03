@@ -150,11 +150,14 @@
 			children = (
 				B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */,
 				B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */,
+<<<<<<< HEAD
 				B0E2BE9F1A80226D00F1C101 /* ViewController.h */,
 				B0E2BEA01A80226D00F1C101 /* ViewController.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
+=======
 				F9DA477B1A8045210039FB9E /* View Controllers */,
+>>>>>>> 33bd9df0b8fdd8a548dc354d6fac53d051f57db7
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
 				B0E2BEA71A80226D00F1C101 /* LaunchScreen.xib */,
@@ -306,11 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				B0D7F33E1A802A7F00205DE0 /* LoginViewController.m in Sources */,
 				B0E2BEA11A80226D00F1C101 /* ViewController.m in Sources */,
+=======
 				F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */,
 				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
 				B0E2BEA11A80226D00F1C101 /* FeedViewController.m in Sources */,
+>>>>>>> 33bd9df0b8fdd8a548dc354d6fac53d051f57db7
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,
 				F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */,
 				F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */,
