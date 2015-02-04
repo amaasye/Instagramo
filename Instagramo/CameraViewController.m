@@ -6,9 +6,12 @@
 //  Copyright (c) 2015 Syed, Kyle and JP. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "CameraViewController.h"
 
 @interface CameraViewController ()
+
+@property (strong, nonatomic) IBOutlet UIImageView *addPhotoImageView;
 
 @end
 
@@ -37,8 +40,12 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
+}
 
-
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+}
 
 @end
