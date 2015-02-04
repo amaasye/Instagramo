@@ -15,8 +15,8 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     if ([PFUser currentUser] == nil) {
         [self performSegueWithIdentifier:@"initialSegue" sender:self];
     }

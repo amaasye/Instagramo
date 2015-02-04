@@ -25,7 +25,6 @@
         if  (error != nil) {
             [self showAlert];
         }
-        //    segueID: "loginSegue"
         [self performSegueWithIdentifier:@"loginsegue" sender:self];
     }];
 }
@@ -41,7 +40,6 @@
             [self showAlert];
         }
         else {
-            //    segueID: "signupSegue"
             [self performSegueWithIdentifier:@"signupsegue" sender:self];
         }
     }];
