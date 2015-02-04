@@ -25,7 +25,7 @@
         if  (error != nil) {
             [self showAlert];
         }
-        [self performSegueWithIdentifier:@"loginsegue" sender:self];
+        [self performSegueWithIdentifier:@"loginSegue" sender:self];
     }];
 }
 
@@ -40,11 +40,12 @@
             [self showAlert];
         }
         else {
-            [self performSegueWithIdentifier:@"signupsegue" sender:self];
+            [self performSegueWithIdentifier:@"signupSegue" sender:self];
         }
     }];
 }
 
+//helper method for the error alert
 -(void)showAlert {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry Broski" message:@"You need to create an account before you can access this awesomeness." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
 
