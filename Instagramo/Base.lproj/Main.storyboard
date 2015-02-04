@@ -903,10 +903,10 @@
             </objects>
             <point key="canvasLocation" x="-8338.5" y="1420"/>
         </scene>
-        <!--Title-->
+        <!--Activity View Controller-->
         <scene sceneID="4L0-Qt-CGf">
             <objects>
-                <viewController id="2tS-vl-KBc" customClass="ActivityViewController" sceneMemberID="viewController">
+                <viewController id="2tS-vl-KBc" userLabel="Activity View Controller" customClass="ActivityViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8lM-r1-EpK"/>
                         <viewControllerLayoutGuide type="bottom" id="Wlw-Jm-omD"/>
@@ -916,7 +916,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="FeN-ym-wt0"/>
+                    <navigationItem key="navigationItem" title="Title" id="FeN-ym-wt0" userLabel="Recent Activity"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdE-1f-UiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
