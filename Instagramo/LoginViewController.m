@@ -47,7 +47,7 @@
 
 //helper method for the error alert
 -(void)showAlert {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry Broski" message:@"You need to create an account before you can access this awesomeness." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry Broski \n Lo Siento wey" message:@"You need to create an account before you can access this awesomeness. \n Es necesario crear una cuenta antes de poder acceder a esta genialidad. " delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
 
     [alert show];
 }
