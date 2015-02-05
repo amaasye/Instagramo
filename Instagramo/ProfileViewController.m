@@ -27,8 +27,19 @@
 
 }
 - (IBAction)onFollowersLabelTapped:(UITapGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:self.view];
+    if (CGRectContainsPoint(self.countFollowersLabel.frame, point)) {
+        [self performSegueWithIdentifier:@"followersSegue" sender:self];
+    }
 }
+
+
+
 - (IBAction)onFollowingLabelTapped:(UITapGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:self.view];
+    if (CGRectContainsPoint(self.countFollowingsLabel.frame, point)) {
+        [self performSegueWithIdentifier:@"followingsSegue" sender:self];
+    }
 }
 
 - (IBAction)onLogoutButtonTapped:(UIBarButtonItem *)sender {

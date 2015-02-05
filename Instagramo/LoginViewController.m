@@ -20,11 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+//- (void)viewDidAppear:(BOOL)animated {
+//    self.usernameTextField.text = @"";
+//    self.passwordTextField.text = @"";
+//}
+
 - (IBAction)onLoginButtonTapped:(UIButton *)sender {
     [PFUser logInWithUsernameInBackground:self.usernameTextField.text password: self.passwordTextField.text block:^(PFUser *user, NSError *error) {
         if  (error != nil) {
             [self showAlert];
-            [self viewDidLoad];
         }
         else if (error == nil) {
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
