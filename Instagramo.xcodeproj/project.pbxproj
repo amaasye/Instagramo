@@ -178,13 +178,13 @@
 		B0E2BE971A80226D00F1C101 /* Instagramo */ = {
 			isa = PBXGroup;
 			children = (
-				F9C699A01A8403BD00A1A4FE /* Custom Classes */,
 				B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */,
 				B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
 				B047DFF01A816C11000A2B69 /* RootViewController.h */,
 				B047DFF11A816C11000A2B69 /* RootViewController.m */,
+				F9C699A01A8403BD00A1A4FE /* Custom Classes */,
 				F9C6999F1A84039100A1A4FE /* Tab Bar View Controllers */,
 				F9DA477B1A8045210039FB9E /* Other View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
