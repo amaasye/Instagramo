@@ -24,8 +24,9 @@
     [PFUser logInWithUsernameInBackground:self.usernameTextField.text password: self.passwordTextField.text block:^(PFUser *user, NSError *error) {
         if  (error != nil) {
             [self showAlert];
-        }
+        } else if (error == nil){
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        }
     }];
 }
 
