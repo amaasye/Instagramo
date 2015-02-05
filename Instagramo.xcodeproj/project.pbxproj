@@ -30,6 +30,8 @@
 		B0E2BEB51A80226D00F1C101 /* InstagramoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BEB41A80226D00F1C101 /* InstagramoTests.m */; };
 		F9961F5B1A81D81400AE0E3C /* EditProfilePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9961F5A1A81D81400AE0E3C /* EditProfilePicViewController.m */; };
 		F9C699731A82B58200A1A4FE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699721A82B58200A1A4FE /* TabBarController.m */; };
+		F9C699761A82F2E000A1A4FE /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699751A82F2E000A1A4FE /* Photo.m */; };
+		F9C699791A82F3A200A1A4FE /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699781A82F3A200A1A4FE /* FeedTableViewCell.m */; };
 		F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA477D1A8045410039FB9E /* SearchViewController.m */; };
 		F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47801A8045550039FB9E /* CameraViewController.m */; };
 		F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47831A8045780039FB9E /* ActivityViewController.m */; };
@@ -82,6 +84,10 @@
 		F9961F5A1A81D81400AE0E3C /* EditProfilePicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfilePicViewController.m; sourceTree = "<group>"; };
 		F9C699711A82B58200A1A4FE /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		F9C699721A82B58200A1A4FE /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		F9C699741A82F2E000A1A4FE /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		F9C699751A82F2E000A1A4FE /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		F9C699771A82F3A200A1A4FE /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		F9C699781A82F3A200A1A4FE /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		F9DA477C1A8045410039FB9E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		F9DA477D1A8045410039FB9E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		F9DA477F1A8045550039FB9E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
@@ -161,12 +167,16 @@
 				B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */,
 				B0E2BE9F1A80226D00F1C101 /* FeedViewController.h */,
 				B0E2BEA01A80226D00F1C101 /* FeedViewController.m */,
+				F9C699771A82F3A200A1A4FE /* FeedTableViewCell.h */,
+				F9C699781A82F3A200A1A4FE /* FeedTableViewCell.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
 				B047DFF01A816C11000A2B69 /* RootViewController.h */,
 				B047DFF11A816C11000A2B69 /* RootViewController.m */,
 				F9C699711A82B58200A1A4FE /* TabBarController.h */,
 				F9C699721A82B58200A1A4FE /* TabBarController.m */,
+				F9C699741A82F2E000A1A4FE /* Photo.h */,
+				F9C699751A82F2E000A1A4FE /* Photo.m */,
 				F9DA477B1A8045210039FB9E /* View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
@@ -319,8 +329,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C699761A82F2E000A1A4FE /* Photo.m in Sources */,
 				F9961F5B1A81D81400AE0E3C /* EditProfilePicViewController.m in Sources */,
 				B0D7F33E1A802A7F00205DE0 /* LoginViewController.m in Sources */,
+				F9C699791A82F3A200A1A4FE /* FeedTableViewCell.m in Sources */,
 				F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */,
 				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,

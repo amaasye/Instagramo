@@ -226,7 +226,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="UserCell" rowHeight="600" id="vfP-al-xX3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="UserCell" rowHeight="600" id="vfP-al-xX3" customClass="FeedTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="vfP-al-xX3" id="KCS-CM-tle">
@@ -325,6 +325,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="commentTextView" destination="VUb-Yg-taC" id="4mQ-uA-KvA"/>
+                                            <outlet property="picAddedImageView" destination="tOM-BA-alk" id="xjo-rP-FLQ"/>
+                                            <outlet property="usernameLabel" destination="dE6-4p-yTU" id="7Ax-nw-0hq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -342,6 +347,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Timeline Feed" id="fAr-PY-wNB"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="P13-65-wqt" id="FHI-BL-YxH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
