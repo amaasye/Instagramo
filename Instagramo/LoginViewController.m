@@ -25,7 +25,9 @@
         if  (error != nil) {
             [self showAlert];
         }
+        else if (error == nil) {
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        }
     }];
 }
 

@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
+#import <UIKit/UIKit.h>
 
-@interface User : PFObject <PFSubclassing>
+@interface User : NSObject
 
 @property NSString *username;
 @property NSString *password;
 @property NSString *emailAddress;
-@property NSString *photoID;
+@property UIImage *profilePic;
 
 
 

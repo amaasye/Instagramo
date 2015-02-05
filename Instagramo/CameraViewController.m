@@ -65,4 +65,11 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
+-(void)showAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Savezies" message:@"You need to create an account before you can access this awesomeness. \n Es necesario crear una cuenta antes de poder acceder a esta genialidad. " delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+
+    [alert show];
+}
+
+
 @end
