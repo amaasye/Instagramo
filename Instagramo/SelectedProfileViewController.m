@@ -9,6 +9,8 @@
 #import "SelectedProfileViewController.h"
 
 @interface SelectedProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *followersLabel;
+@property (strong, nonatomic) IBOutlet UILabel *followingsLabel;
 
 @end
 
@@ -19,9 +21,17 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)onFollowersLabelTapped:(UITapGestureRecognizer *)sender {
-
+    CGPoint point = [sender locationInView:self.view];
+    if (CGRectContainsPoint(self.followersLabel.frame, point)) {
+        [self performSegueWithIdentifier:@"fllrsSegue" sender:self];
+    }
 }
 - (IBAction)onFollowingsLabelTapped:(UITapGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:self.view];
+    if (CGRectContainsPoint(self.followingsLabel.frame, point)) {
+        [self performSegueWithIdentifier:@"fllingsSegue" sender:self];
+    }
+
 
 }
 - (IBAction)onFollowButtonTapped:(UIButton *)sender {

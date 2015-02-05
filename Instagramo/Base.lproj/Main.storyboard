@@ -771,7 +771,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ox-dn-wcO">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ox-dn-wcO">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -797,7 +797,7 @@
                                     <outletCollection property="gestureRecognizers" destination="cbw-pX-ibe" appends="YES" id="Xbg-ml-QeE"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuE-s1-bWK">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RuE-s1-bWK">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -998,6 +998,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Member Profile" id="l09-dQ-HCX"/>
+                    <connections>
+                        <outlet property="followersLabel" destination="7ox-dn-wcO" id="NHo-5Q-Fnc"/>
+                        <outlet property="followingsLabel" destination="RuE-s1-bWK" id="6P9-KI-yBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPJ-CZ-p3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cbw-pX-ibe">
@@ -1247,7 +1251,7 @@
                                     <constraint firstAttribute="height" constant="100" id="d2D-yD-DXu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#ers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSP-9u-SOY">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#ers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSP-9u-SOY">
                                 <rect key="frame" x="180" y="20" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -1266,7 +1270,7 @@
                                     <outletCollection property="gestureRecognizers" destination="MrS-EI-kxi" appends="YES" id="ZGY-3Z-Mle"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#ing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4BB-DF-N0j">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#ing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4BB-DF-N0j">
                                 <rect key="frame" x="267" y="20" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -1293,7 +1297,7 @@
                                     <constraint firstAttribute="height" constant="30" id="htT-Ug-nbC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="EDIT PROFILE">
+                                <state key="normal" title="Change Profile Picture">
                                     <color key="titleColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1443,11 +1447,13 @@
                                 <rect key="frame" x="100" y="488" width="400" height="30"/>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.18431372549019609" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Fd4-1N-4hm"/>
+                                    <constraint firstAttribute="height" constant="30" id="Fd4-1N-4hm">
+                                        <variation key="widthClass=compact" constant="36"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" constant="400" id="h1y-o5-3t4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="EDIT PROFILE PIC">
+                                <state key="normal" title="Change Profile Picture">
                                     <color key="titleColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1455,17 +1461,6 @@
                                     <action selector="onEditProfilePicTapped:" destination="k3W-Cm-nAc" eventType="touchUpInside" id="ilH-Oq-dWt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhc-37-SbL">
-                                <rect key="frame" x="116" y="28" width="368" height="30"/>
-                                <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="368" id="wxL-Lh-YhQ"/>
-                                    <constraint firstAttribute="height" constant="30" id="ysv-u5-vXN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.38823529410000002" green="0.27450980390000002" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadError" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-EN-P13">
                                 <rect key="frame" x="116" y="91" width="368" height="368"/>
                                 <constraints>
@@ -1476,10 +1471,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Jhc-37-SbL" firstAttribute="top" secondItem="XTb-KT-aVW" secondAttribute="bottom" constant="8" id="1S2-bj-MJb"/>
                             <constraint firstAttribute="centerX" secondItem="LDM-vd-zH3" secondAttribute="centerX" id="B9b-Oa-o47"/>
                             <constraint firstAttribute="centerX" secondItem="CTG-EN-P13" secondAttribute="centerX" id="WcT-MQ-VyJ"/>
-                            <constraint firstAttribute="centerX" secondItem="Jhc-37-SbL" secondAttribute="centerX" id="fqh-DY-B3f"/>
                             <constraint firstItem="LDM-vd-zH3" firstAttribute="top" secondItem="CTG-EN-P13" secondAttribute="bottom" constant="29" id="mZy-nV-ATs"/>
                             <constraint firstAttribute="centerY" secondItem="CTG-EN-P13" secondAttribute="centerY" id="q1e-jj-39m"/>
                         </constraints>
@@ -1523,9 +1516,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vCm-r9-jjs"/>
-        <segue reference="z8I-xt-MED"/>
+        <segue reference="ey4-oS-Pqq"/>
         <segue reference="ALv-aJ-Xyo"/>
         <segue reference="oog-TM-kJq"/>
-        <segue reference="0u2-9G-XMJ"/>
+        <segue reference="fkM-GP-VkQ"/>
     </inferredMetricsTieBreakers>
 </document>
