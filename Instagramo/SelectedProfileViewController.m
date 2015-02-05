@@ -9,6 +9,8 @@
 #import "SelectedProfileViewController.h"
 
 @interface SelectedProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *followersLabel;
+@property (strong, nonatomic) IBOutlet UILabel *followingsLabel;
 
 @end
 

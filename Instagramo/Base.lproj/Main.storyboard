@@ -998,6 +998,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Member Profile" id="l09-dQ-HCX"/>
+                    <connections>
+                        <outlet property="followersLabel" destination="7ox-dn-wcO" id="NHo-5Q-Fnc"/>
+                        <outlet property="followingsLabel" destination="RuE-s1-bWK" id="6P9-KI-yBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPJ-CZ-p3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cbw-pX-ibe">
@@ -1513,8 +1517,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="vCm-r9-jjs"/>
         <segue reference="ey4-oS-Pqq"/>
-        <segue reference="P7j-EE-v3v"/>
         <segue reference="ALv-aJ-Xyo"/>
-        <segue reference="or4-Qj-Se0"/>
+        <segue reference="oog-TM-kJq"/>
+        <segue reference="fkM-GP-VkQ"/>
     </inferredMetricsTieBreakers>
 </document>
