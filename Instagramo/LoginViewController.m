@@ -26,7 +26,7 @@
             [self showAlert];
         }
         else if (error == nil) {
-        [self performSegueWithIdentifier:@"loginSegue" sender:self];
+            [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
     }];
 }
