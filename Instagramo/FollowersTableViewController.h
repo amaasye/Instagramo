@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FollowersTableViewController : UITableViewController
-
+@property NSArray *friends;
 @end

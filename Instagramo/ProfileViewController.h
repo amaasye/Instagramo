@@ -10,4 +10,6 @@
 
 @interface ProfileViewController : UIViewController
 
+@property (nonatomic, retain) NSArray *followingFriendsArray;
+@property (nonatomic, retain) NSArray *followerFriendsArray;
 @end

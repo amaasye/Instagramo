@@ -8,7 +8,8 @@
 
 #import "ProfileViewController.h"
 #import <Parse/Parse.h>
-
+#import "FollowersTableViewController.h"
+#import "User.h"
 
 
 @interface ProfileViewController ()
@@ -26,10 +27,27 @@
     [super viewDidLoad];
 
 }
+- (void)handlerGetFollowingInformation:(id)value {
+//    BOOL success = [Utility checkWebServiceErrors:value controller:self.navigationController];
+//
+//    if (success) {
+        User *friend = (User *)value;
+
+        self.followingFriendsArray = [[NSArray alloc] initWithArray:friend.followings];
+        self.followerFriendsArray = [[NSArray alloc] initWithArray:friend.followers];
+
+}
+
 - (IBAction)onFollowersLabelTapped:(UITapGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:self.view];
     if (CGRectContainsPoint(self.countFollowersLabel.frame, point)) {
         [self performSegueWithIdentifier:@"followersSegue" sender:self];
+
+        FollowersTableViewController *fvc = [[FollowersTableViewController alloc] initWithNibName:@"FollowingViewController" bundle:nil];
+
+        fvc.friends = _followerFriendsArray;
+
+        [self.navigationController pushViewController:fvc animated:YES];
     }
 }
 
@@ -39,6 +57,12 @@
     CGPoint point = [sender locationInView:self.view];
     if (CGRectContainsPoint(self.countFollowingsLabel.frame, point)) {
         [self performSegueWithIdentifier:@"followingsSegue" sender:self];
+
+        FollowersTableViewController *fvc = [[FollowersTableViewController alloc] initWithNibName:@"FollowingViewController" bundle:nil];
+
+        fvc.friends = _followerFriendsArray;
+
+        [self.navigationController pushViewController:fvc animated:YES];
     }
 }
 
