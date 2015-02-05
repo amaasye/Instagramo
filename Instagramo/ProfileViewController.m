@@ -7,6 +7,9 @@
 //
 
 #import "ProfileViewController.h"
+#import <Parse/Parse.h>
+
+
 
 @interface ProfileViewController ()
 
@@ -25,7 +28,18 @@
 
 }
 - (IBAction)onLogoutButtonTapped:(UIBarButtonItem *)sender {
+    [self logOutUser];
+
 }
+
+- (void)logOutUser {
+        if ([PFUser currentUser]) {
+            [PFUser logOut];
+        } else {
+            NSLog(@"currentUser: %@", [PFUser currentUser]);
+        }
+}
+
 
 #pragma mark ------------ COLLECTIONVIEW DELEGATE AND DATASOURCE ------------
 

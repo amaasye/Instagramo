@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B047DFF21A816C11000A2B69 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B047DFF11A816C11000A2B69 /* RootViewController.m */; };
+		B047DFFC1A83D012000A2B69 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B047DFFB1A83D012000A2B69 /* User.m */; };
 		B0BEA71E1A803D0C00606C14 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEA71D1A803D0C00606C14 /* Parse.framework */; };
 		B0BEA7201A803D1D00606C14 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEA71F1A803D1D00606C14 /* Bolts.framework */; };
 		B0BEA7221A803D7E00606C14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BEA7211A803D7E00606C14 /* AudioToolbox.framework */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		B047DFF01A816C11000A2B69 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		B047DFF11A816C11000A2B69 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B047DFFA1A83D012000A2B69 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B047DFFB1A83D012000A2B69 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B0BEA71D1A803D0C00606C14 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B0BEA71F1A803D1D00606C14 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B0BEA7211A803D7E00606C14 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -176,6 +179,8 @@
 				F9C699711A82B58200A1A4FE /* TabBarController.h */,
 				F9C699721A82B58200A1A4FE /* TabBarController.m */,
 				F9C699741A82F2E000A1A4FE /* Photo.h */,
+				B047DFFA1A83D012000A2B69 /* User.h */,
+				B047DFFB1A83D012000A2B69 /* User.m */,
 				F9C699751A82F2E000A1A4FE /* Photo.m */,
 				F9DA477B1A8045210039FB9E /* View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
@@ -337,6 +342,7 @@
 				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,
 				F9C699731A82B58200A1A4FE /* TabBarController.m in Sources */,
+				B047DFFC1A83D012000A2B69 /* User.m in Sources */,
 				F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */,
 				B047DFF21A816C11000A2B69 /* RootViewController.m in Sources */,
 				F9DA47BE1A8157400039FB9E /* FeedViewController.m in Sources */,
