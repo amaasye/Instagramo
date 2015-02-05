@@ -68,13 +68,13 @@
 }
 
 -(void)showAlert {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save?!" message:@"Are you 100% sure that you want to share this awesomeness with the world? " delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save?! \n ¡¿salvaguardar?!" message:@"Are you 100% sure that you want to share this awesomeness with the world? \n \n ¿Estás 100% seguro que quieres compartir esta genialidad con el mundo? " delegate:self cancelButtonTitle:@"Sí" otherButtonTitles:@"No", nil];
 
     [alert show];
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == [alertView cancelButtonIndex]) {
-        NSLog(@"It's All Good");
+        NSLog(@"It's All Good \n Todo es bueno");
     }
 }
 
