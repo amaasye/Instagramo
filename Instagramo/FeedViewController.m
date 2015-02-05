@@ -25,9 +25,7 @@
     [self loadData];
 }
 
-- (IBAction)onRefreshTapped:(UIBarButtonItem *)sender {
-    [self loadData];
-}
+
 
 - (void)loadData{
     self.photos = [NSMutableArray new];
@@ -81,6 +79,12 @@
     cell.commentTextView.text = photo.caption;
     
     return cell;
+}
+
+#pragma mark ------------ Actions ------------
+
+- (IBAction)onRefreshTapped:(UIBarButtonItem *)sender {
+    [self loadData];
 }
 
 @end

@@ -13,7 +13,6 @@
 
 @interface ProfileViewController ()
 
-@property (strong, nonatomic) IBOutlet UILabel *countPostsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *countFollowersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *countFollowingsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
@@ -27,6 +26,11 @@
     [super viewDidLoad];
 
 }
+- (IBAction)onFollowersLabelTapped:(UITapGestureRecognizer *)sender {
+}
+- (IBAction)onFollowingLabelTapped:(UITapGestureRecognizer *)sender {
+}
+
 - (IBAction)onLogoutButtonTapped:(UIBarButtonItem *)sender {
     [self logOutUser];
 

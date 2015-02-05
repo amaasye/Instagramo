@@ -8,8 +8,9 @@
 
 #import "SearchViewController.h"
 
-@interface SearchViewController ()
+@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *searchTableView;
 @end
 
 @implementation SearchViewController
@@ -17,6 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+}
+
+
+
+#pragma mark ------------ TABLEVIEW DELEGATE AND DATASOURCE ------------
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell"];
+
+    return cell;
 }
 
 /*
