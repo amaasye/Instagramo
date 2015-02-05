@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *countFollowersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *countFollowingsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 
 @end
 

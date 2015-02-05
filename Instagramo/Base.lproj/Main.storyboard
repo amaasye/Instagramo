@@ -862,6 +862,7 @@
                         <outlet property="countFollowersLabel" destination="QSP-9u-SOY" id="YQM-Mt-gwX"/>
                         <outlet property="countFollowingsLabel" destination="4BB-DF-N0j" id="hu9-59-3ti"/>
                         <outlet property="countPostsLabel" destination="wLo-kZ-83f" id="TjS-5z-J8i"/>
+                        <outlet property="logoutButton" destination="TcC-3f-C9B" id="kLL-pJ-sxO"/>
                         <outlet property="userNameLabel" destination="73Q-g7-Cu3" id="zEi-ZS-FjH"/>
                     </connections>
                 </viewController>
