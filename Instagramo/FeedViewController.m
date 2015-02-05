@@ -19,6 +19,36 @@
 
 }
 
+//-(void)loadData{
+//
+//    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//
+//            for (PFObject *object in objects) {
+//
+//                PFFile *imageFile = [object objectForKey:@"photo"];
+//                [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+//
+//                    UIImage *image = [UIImage imageWithData:data];
+//                    Photo *photo = [Photo new];
+//                    photo.image = image;
+//                    photo.username =[object objectForKey:@"username"];
+//                    photo.caption = [object objectForKey:@"caption"];
+//                    [self.photos addObject:photo];
+//
+//                    [self.tableView reloadData];
+//                }];
+//
+//            }
+//        } else {
+//
+//            NSLog(@"Error: %@ %@", error, [error userInfo]);
+//        }
+//    }];
+//    NSLog(@"%lu", (unsigned long)self.photos.count);
+//}
+
 #pragma mark ------------ TABLEVIEW DELEGATE AND DATASOURCE ------------
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

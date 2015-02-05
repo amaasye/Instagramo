@@ -250,7 +250,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="VhV-SR-LsN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadError" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-BA-alk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-BA-alk">
                                                     <rect key="frame" x="0.0" y="29" width="600" height="291"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="291" id="Qer-La-Hjb"/>
@@ -405,8 +405,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ZX-lm-Jkb">
                                 <rect key="frame" x="25" y="20" width="550" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="jSH-5k-T0S"/>
+                                    <constraint firstAttribute="height" constant="350" id="jSH-5k-T0S">
+                                        <variation key="widthClass=compact" constant="275"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="200" id="nC7-wN-ZXB"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nC7-wN-ZXB"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="nC7-wN-ZXB"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8A-kv-8Mb">
                                 <rect key="frame" x="338" y="413" width="100" height="100"/>
@@ -434,38 +447,77 @@
                                     <action selector="selectPhotoButton:" destination="6LL-Cv-Ixv" eventType="touchUpInside" id="0b8-z3-v7Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDj-t9-0Wx">
-                                <rect key="frame" x="266.5" y="429" width="67" height="67"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Caption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qi5-Zd-3DI">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="s0o-KL-nS6"/>
-                                    <constraint firstAttribute="width" constant="67" id="yWE-ky-bYM"/>
+                                    <constraint firstAttribute="width" constant="276" id="4mx-iL-NC2"/>
+                                    <constraint firstAttribute="height" constant="30" id="yCV-kp-Vhm"/>
                                 </constraints>
-                                <state key="normal" image="cancel1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4mx-iL-NC2"/>
+                                        <exclude reference="yCV-kp-Vhm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4mx-iL-NC2"/>
+                                        <include reference="yCV-kp-Vhm"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="iDj-t9-0Wx" firstAttribute="top" secondItem="rPU-NB-lr2" secondAttribute="topMargin" constant="429" id="3iX-KF-mnb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7ZX-lm-Jkb" secondAttribute="trailing" constant="9" id="Ick-HK-moV"/>
-                            <constraint firstItem="7ZX-lm-Jkb" firstAttribute="top" secondItem="KbL-cB-Fo1" secondAttribute="bottom" id="M1U-KF-Bar"/>
                             <constraint firstAttribute="centerX" secondItem="b8A-kv-8Mb" secondAttribute="centerX" constant="-88" id="RWP-M3-iwe"/>
+                            <constraint firstAttribute="centerX" secondItem="7ZX-lm-Jkb" secondAttribute="centerX" id="bJa-KI-aby"/>
+                            <constraint firstAttribute="centerX" secondItem="Qi5-Zd-3DI" secondAttribute="centerX" id="bQN-E5-jjI"/>
                             <constraint firstItem="b8A-kv-8Mb" firstAttribute="top" secondItem="rPU-NB-lr2" secondAttribute="topMargin" constant="413" id="oBx-r7-mBN"/>
-                            <constraint firstAttribute="centerX" secondItem="iDj-t9-0Wx" secondAttribute="centerX" id="teT-E5-Oyw"/>
-                            <constraint firstItem="7ZX-lm-Jkb" firstAttribute="leading" secondItem="rPU-NB-lr2" secondAttribute="leadingMargin" constant="9" id="v86-aY-kuY"/>
+                            <constraint firstItem="Qi5-Zd-3DI" firstAttribute="top" secondItem="KbL-cB-Fo1" secondAttribute="bottom" constant="8" id="vgt-vx-t0H"/>
+                            <constraint firstItem="7ZX-lm-Jkb" firstAttribute="top" secondItem="Qi5-Zd-3DI" secondAttribute="bottom" id="wQr-f7-ejy"/>
                             <constraint firstItem="KR8-g9-nyK" firstAttribute="top" secondItem="rPU-NB-lr2" secondAttribute="topMargin" constant="413" id="wcX-Ev-H2e"/>
                             <constraint firstAttribute="centerX" secondItem="KR8-g9-nyK" secondAttribute="centerX" constant="88" id="yV8-GA-lue"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Qi5-Zd-3DI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="bQN-E5-jjI"/>
+                                <exclude reference="vgt-vx-t0H"/>
+                                <exclude reference="bJa-KI-aby"/>
+                                <exclude reference="wQr-f7-ejy"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Qi5-Zd-3DI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="bQN-E5-jjI"/>
+                                <include reference="vgt-vx-t0H"/>
+                                <include reference="bJa-KI-aby"/>
+                                <include reference="wQr-f7-ejy"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Photos" id="Nbd-GV-DxA"/>
+                    <navigationItem key="navigationItem" title="Add Photos" id="Nbd-GV-DxA">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="axi-Z5-iBB">
+                            <connections>
+                                <action selector="saveBarButtonItemTapped:" destination="6LL-Cv-Ixv" id="aRU-10-QFJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addPhotoImageView" destination="7ZX-lm-Jkb" id="lSK-pS-7rc"/>
+                        <outlet property="captionTextField" destination="Qi5-Zd-3DI" id="j4m-1J-58X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5b-l7-3Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8338.5" y="2083.9999999999991"/>
+            <point key="canvasLocation" x="-8338.5" y="2083"/>
         </scene>
         <!--Search-->
         <scene sceneID="9aa-Pa-Bk0">
@@ -589,8 +641,26 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKH-L7-usN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="WKH-L7-usN"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="WKH-L7-usN"/>
+                                            </mask>
+                                        </variation>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -707,6 +777,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countFollowersLabel" destination="QSP-9u-SOY" id="YQM-Mt-gwX"/>
+                        <outlet property="countFollowingsLabel" destination="4BB-DF-N0j" id="hu9-59-3ti"/>
+                        <outlet property="countPostsLabel" destination="wLo-kZ-83f" id="TjS-5z-J8i"/>
+                        <outlet property="userNameLabel" destination="73Q-g7-Cu3" id="zEi-ZS-FjH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUx-hm-IbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -799,7 +875,6 @@
         <image name="activity" width="40" height="40"/>
         <image name="cam" width="35" height="35"/>
         <image name="camera" width="128" height="128"/>
-        <image name="cancel1" width="67" height="67"/>
         <image name="downloadIMG" width="128" height="128"/>
         <image name="feed" width="40" height="40"/>
         <image name="insta1" width="512" height="512"/>

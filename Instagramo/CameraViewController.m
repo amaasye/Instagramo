@@ -12,6 +12,7 @@
 @interface CameraViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *addPhotoImageView;
+@property (strong, nonatomic) IBOutlet UITextField *captionTextField;
 
 @end
 
@@ -23,8 +24,22 @@
 
 }
 
-- (IBAction)takePhoto
-{
+- (IBAction)saveBarButtonItemTapped:(UIBarButtonItem *)sender {
+    NSData* data = UIImageJPEGRepresentation(self.addPhotoImageView.image, 0.5f);
+    PFFile *imageFile = [PFFile fileWithName:@"photo.jpeg" data: data];
+    PFObject *photo = [PFObject objectWithClassName: @"Images"];
+    PFUser *currentUser = [PFUser currentUser];
+
+    photo[@"imageFile"] = imageFile;
+    photo[@"username"] = currentUser.username;
+    photo[@"caption"] = self.captionTextField.text;
+    NSLog(@"%@",self.captionTextField.text);
+
+    [self.captionTextField resignFirstResponder];
+    [photo saveInBackground];
+}
+
+- (IBAction)takePhoto {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     imagePickerController.editing = YES;
@@ -33,7 +48,7 @@
     [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
--(IBAction)selectPhotoButton:(UIButton *)sender{
+-(IBAction)selectPhotoButton:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     [picker setSourceType:(UIImagePickerControllerSourceTypePhotoLibrary)];
@@ -41,11 +56,13 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-
+    UIImage *image = [info valueForKey: UIImagePickerControllerOriginalImage];
+    self.addPhotoImageView.image = image;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

@@ -10,6 +10,11 @@
 
 @interface ProfileViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *countPostsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *countFollowersLabel;
+@property (strong, nonatomic) IBOutlet UILabel *countFollowingsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+
 @end
 
 @implementation ProfileViewController
