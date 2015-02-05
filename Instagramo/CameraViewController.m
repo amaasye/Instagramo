@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import "CameraViewController.h"
 
-@interface CameraViewController ()
+@interface CameraViewController () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *addPhotoImageView;
 @property (strong, nonatomic) IBOutlet UITextField *captionTextField;
@@ -25,6 +25,8 @@
 }
 
 - (IBAction)saveBarButtonItemTapped:(UIBarButtonItem *)sender {
+    [self showAlert];
+
     NSData* data = UIImageJPEGRepresentation(self.addPhotoImageView.image, 0.5f);
     PFFile *imageFile = [PFFile fileWithName:@"photo.jpeg" data: data];
     PFObject *photo = [PFObject objectWithClassName: @"Images"];
@@ -64,5 +66,18 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
+
+-(void)showAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save?! \n ¡¿salvaguardar?!" message:@"Are you 100% sure that you want to share this awesomeness with the world? \n \n ¿Estás 100% seguro que quieres compartir esta genialidad con el mundo? " delegate:self cancelButtonTitle:@"Sí" otherButtonTitles:@"No", nil];
+
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        NSLog(@"It's All Good \n Todo es bueno");
+    }
+}
+
 
 @end

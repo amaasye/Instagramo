@@ -8,21 +8,7 @@
 
 #import "User.h"
 
-@interface User ()
-@property NSString *userID;
-@end
-
 @implementation User
-@dynamic username;
-@dynamic password;
-@dynamic emailAddress;
 
-+(NSString *)parseClassName{
-    return @"User";
-}
-
-+(void)load{
-    [self registerSubclass];
-}
 
 @end

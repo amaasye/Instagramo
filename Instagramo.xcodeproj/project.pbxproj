@@ -32,16 +32,16 @@
 		F9961F5B1A81D81400AE0E3C /* EditProfilePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9961F5A1A81D81400AE0E3C /* EditProfilePicViewController.m */; };
 		F9C699731A82B58200A1A4FE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699721A82B58200A1A4FE /* TabBarController.m */; };
 		F9C699761A82F2E000A1A4FE /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699751A82F2E000A1A4FE /* Photo.m */; };
-		F9C699791A82F3A200A1A4FE /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699781A82F3A200A1A4FE /* FeedTableViewCell.m */; };
 		F9C6997F1A83DB6C00A1A4FE /* CommentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6997E1A83DB6C00A1A4FE /* CommentsTableViewController.m */; };
 		F9C699821A83DB9400A1A4FE /* FollowersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699811A83DB9400A1A4FE /* FollowersTableViewController.m */; };
 		F9C699851A83EEB600A1A4FE /* SelectedProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699841A83EEB600A1A4FE /* SelectedProfileViewController.m */; };
 		F9C699881A83F70000A1A4FE /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699871A83F70000A1A4FE /* ImageViewController.m */; };
-		F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA477D1A8045410039FB9E /* SearchViewController.m */; };
-		F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47801A8045550039FB9E /* CameraViewController.m */; };
-		F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47831A8045780039FB9E /* ActivityViewController.m */; };
-		F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA47861A80458D0039FB9E /* ProfileViewController.m */; };
-		F9DA47BE1A8157400039FB9E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2BEA01A80226D00F1C101 /* FeedViewController.m */; };
+		F9C699981A8401C000A1A4FE /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998B1A8401C000A1A4FE /* CameraViewController.m */; };
+		F9C699991A8401C000A1A4FE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998C1A8401C000A1A4FE /* SearchViewController.m */; };
+		F9C6999A1A8401C000A1A4FE /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998D1A8401C000A1A4FE /* ActivityViewController.m */; };
+		F9C6999B1A8401C000A1A4FE /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998E1A8401C000A1A4FE /* FeedViewController.m */; };
+		F9C6999C1A8401C000A1A4FE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998F1A8401C000A1A4FE /* ProfileViewController.m */; };
+		F9C6999D1A8401C000A1A4FE /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699911A8401C000A1A4FE /* FeedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +79,6 @@
 		B0E2BE9A1A80226D00F1C101 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B0E2BE9F1A80226D00F1C101 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		B0E2BEA01A80226D00F1C101 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		B0E2BEA31A80226D00F1C101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E2BEA51A80226D00F1C101 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0E2BEA81A80226D00F1C101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -93,8 +91,6 @@
 		F9C699721A82B58200A1A4FE /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		F9C699741A82F2E000A1A4FE /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		F9C699751A82F2E000A1A4FE /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
-		F9C699771A82F3A200A1A4FE /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
-		F9C699781A82F3A200A1A4FE /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		F9C6997D1A83DB6C00A1A4FE /* CommentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsTableViewController.h; sourceTree = "<group>"; };
 		F9C6997E1A83DB6C00A1A4FE /* CommentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsTableViewController.m; sourceTree = "<group>"; };
 		F9C699801A83DB9400A1A4FE /* FollowersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersTableViewController.h; sourceTree = "<group>"; };
@@ -103,14 +99,18 @@
 		F9C699841A83EEB600A1A4FE /* SelectedProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedProfileViewController.m; sourceTree = "<group>"; };
 		F9C699861A83F70000A1A4FE /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		F9C699871A83F70000A1A4FE /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
-		F9DA477C1A8045410039FB9E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		F9DA477D1A8045410039FB9E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		F9DA477F1A8045550039FB9E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		F9DA47801A8045550039FB9E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
-		F9DA47821A8045780039FB9E /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
-		F9DA47831A8045780039FB9E /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
-		F9DA47851A80458D0039FB9E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		F9DA47861A80458D0039FB9E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		F9C6998B1A8401C000A1A4FE /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		F9C6998C1A8401C000A1A4FE /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F9C6998D1A8401C000A1A4FE /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		F9C6998E1A8401C000A1A4FE /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		F9C6998F1A8401C000A1A4FE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		F9C699901A8401C000A1A4FE /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		F9C699911A8401C000A1A4FE /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
+		F9C699921A8401C000A1A4FE /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		F9C699931A8401C000A1A4FE /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		F9C699951A8401C000A1A4FE /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		F9C699961A8401C000A1A4FE /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		F9C699971A8401C000A1A4FE /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,15 +178,31 @@
 		B0E2BE971A80226D00F1C101 /* Instagramo */ = {
 			isa = PBXGroup;
 			children = (
+				F9C6998B1A8401C000A1A4FE /* CameraViewController.m */,
+				F9C6998C1A8401C000A1A4FE /* SearchViewController.m */,
+				F9C6998D1A8401C000A1A4FE /* ActivityViewController.m */,
+				F9C6998E1A8401C000A1A4FE /* FeedViewController.m */,
+				F9C6998F1A8401C000A1A4FE /* ProfileViewController.m */,
+				F9C699901A8401C000A1A4FE /* FeedTableViewCell.h */,
+				F9C699911A8401C000A1A4FE /* FeedTableViewCell.m */,
+				F9C699921A8401C000A1A4FE /* CameraViewController.h */,
+				F9C699931A8401C000A1A4FE /* FeedViewController.h */,
+				F9C699951A8401C000A1A4FE /* ProfileViewController.h */,
+				F9C699961A8401C000A1A4FE /* ActivityViewController.h */,
+				F9C699971A8401C000A1A4FE /* SearchViewController.h */,
 				B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */,
 				B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */,
-				B047DFF01A816C11000A2B69 /* RootViewController.h */,
-				B047DFF11A816C11000A2B69 /* RootViewController.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
-				F9C6998A1A83FDF000A1A4FE /* Tab Bar View Controllers */,
+				B047DFF01A816C11000A2B69 /* RootViewController.h */,
+				B047DFF11A816C11000A2B69 /* RootViewController.m */,
+				F9C699711A82B58200A1A4FE /* TabBarController.h */,
+				F9C699721A82B58200A1A4FE /* TabBarController.m */,
+				B047DFFA1A83D012000A2B69 /* User.h */,
+				B047DFFB1A83D012000A2B69 /* User.m */,
+				F9C699741A82F2E000A1A4FE /* Photo.h */,
+				F9C699751A82F2E000A1A4FE /* Photo.m */,
 				F9DA477B1A8045210039FB9E /* Other View Controllers */,
-				F9C699891A83FDC200A1A4FE /* Custom Classes */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
 				B0E2BEA71A80226D00F1C101 /* LaunchScreen.xib */,
@@ -219,38 +235,6 @@
 				B0E2BEB31A80226D00F1C101 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F9C699891A83FDC200A1A4FE /* Custom Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F9C699741A82F2E000A1A4FE /* Photo.h */,
-				F9C699751A82F2E000A1A4FE /* Photo.m */,
-				B047DFFA1A83D012000A2B69 /* User.h */,
-				B047DFFB1A83D012000A2B69 /* User.m */,
-			);
-			name = "Custom Classes";
-			sourceTree = "<group>";
-		};
-		F9C6998A1A83FDF000A1A4FE /* Tab Bar View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F9C699711A82B58200A1A4FE /* TabBarController.h */,
-				F9C699721A82B58200A1A4FE /* TabBarController.m */,
-				F9C699771A82F3A200A1A4FE /* FeedTableViewCell.h */,
-				F9C699781A82F3A200A1A4FE /* FeedTableViewCell.m */,
-				B0E2BE9F1A80226D00F1C101 /* FeedViewController.h */,
-				B0E2BEA01A80226D00F1C101 /* FeedViewController.m */,
-				F9DA477F1A8045550039FB9E /* CameraViewController.h */,
-				F9DA47801A8045550039FB9E /* CameraViewController.m */,
-				F9DA477C1A8045410039FB9E /* SearchViewController.h */,
-				F9DA477D1A8045410039FB9E /* SearchViewController.m */,
-				F9DA47821A8045780039FB9E /* ActivityViewController.h */,
-				F9DA47831A8045780039FB9E /* ActivityViewController.m */,
-				F9DA47851A80458D0039FB9E /* ProfileViewController.h */,
-				F9DA47861A80458D0039FB9E /* ProfileViewController.m */,
-			);
-			name = "Tab Bar View Controllers";
 			sourceTree = "<group>";
 		};
 		F9DA477B1A8045210039FB9E /* Other View Controllers */ = {
@@ -371,22 +355,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C699761A82F2E000A1A4FE /* Photo.m in Sources */,
+				F9C699981A8401C000A1A4FE /* CameraViewController.m in Sources */,
+				F9C699991A8401C000A1A4FE /* SearchViewController.m in Sources */,
 				F9961F5B1A81D81400AE0E3C /* EditProfilePicViewController.m in Sources */,
 				B0D7F33E1A802A7F00205DE0 /* LoginViewController.m in Sources */,
-				F9C699791A82F3A200A1A4FE /* FeedTableViewCell.m in Sources */,
 				F9C699851A83EEB600A1A4FE /* SelectedProfileViewController.m in Sources */,
-				F9DA47811A8045550039FB9E /* CameraViewController.m in Sources */,
+				F9C6999C1A8401C000A1A4FE /* ProfileViewController.m in Sources */,
 				F9C699881A83F70000A1A4FE /* ImageViewController.m in Sources */,
-				F9DA47841A8045780039FB9E /* ActivityViewController.m in Sources */,
 				B0E2BE9E1A80226D00F1C101 /* AppDelegate.m in Sources */,
 				F9C699731A82B58200A1A4FE /* TabBarController.m in Sources */,
+				F9C6999D1A8401C000A1A4FE /* FeedTableViewCell.m in Sources */,
 				F9C6997F1A83DB6C00A1A4FE /* CommentsTableViewController.m in Sources */,
 				B047DFFC1A83D012000A2B69 /* User.m in Sources */,
-				F9DA47871A80458D0039FB9E /* ProfileViewController.m in Sources */,
 				B047DFF21A816C11000A2B69 /* RootViewController.m in Sources */,
-				F9DA47BE1A8157400039FB9E /* FeedViewController.m in Sources */,
 				F9C699821A83DB9400A1A4FE /* FollowersTableViewController.m in Sources */,
-				F9DA477E1A8045410039FB9E /* SearchViewController.m in Sources */,
+				F9C6999B1A8401C000A1A4FE /* FeedViewController.m in Sources */,
+				F9C6999A1A8401C000A1A4FE /* ActivityViewController.m in Sources */,
 				B0E2BE9B1A80226D00F1C101 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

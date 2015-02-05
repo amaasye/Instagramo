@@ -8,7 +8,7 @@
 #import <Parse/Parse.h>
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
@@ -24,8 +24,10 @@
     [PFUser logInWithUsernameInBackground:self.usernameTextField.text password: self.passwordTextField.text block:^(PFUser *user, NSError *error) {
         if  (error != nil) {
             [self showAlert];
-        } else if (error == nil){
-        [self performSegueWithIdentifier:@"loginSegue" sender:self];
+            [self viewDidLoad];
+        }
+        else if (error == nil) {
+            [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
     }];
 }
@@ -48,11 +50,17 @@
 
 //helper method for the error alert
 -(void)showAlert {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry Broski \n Lo Siento wey" message:@"You need to create an account before you can access this awesomeness. \n Es necesario crear una cuenta antes de poder acceder a esta genialidad. " delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry Broski \n Lo Siento wey" message:@"You need to create an account before you can access this awesomeness. \n Es necesario crear una cuenta antes de poder acceder a esta genialidad. " delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 
     [alert show];
 }
 
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        [self viewDidLoad];
+        NSLog(@"It's All Good");
+    }
+}
 
 
 @end
