@@ -24,6 +24,8 @@
     [super viewDidLoad];
 
 }
+- (IBAction)onLogoutButtonTapped:(UIBarButtonItem *)sender {
+}
 
 #pragma mark ------------ COLLECTIONVIEW DELEGATE AND DATASOURCE ------------
 

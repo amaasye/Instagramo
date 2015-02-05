@@ -854,7 +854,8 @@
                     <navigationItem key="navigationItem" title="My Profile" id="z3V-hm-dBZ">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="TcC-3f-C9B">
                             <connections>
-                                <segue destination="A6b-1U-Cs5" kind="presentation" modalTransitionStyle="flipHorizontal" id="ey4-oS-Pqq"/>
+                                <action selector="onLogoutButtonTapped:" destination="Zbd-JJ-yxA" id="KZc-o8-tBI"/>
+                                <segue destination="A6b-1U-Cs5" kind="presentation" identifier="logoutSegue" modalTransitionStyle="flipHorizontal" id="ey4-oS-Pqq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
