@@ -25,6 +25,10 @@
     [self loadData];
 }
 
+- (IBAction)onRefreshTapped:(UIBarButtonItem *)sender {
+    [self loadData];
+}
+
 - (void)loadData{
     self.photos = [NSMutableArray new];
 

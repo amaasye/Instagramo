@@ -250,7 +250,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="VhV-SR-LsN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-BA-alk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-BA-alk">
                                                     <rect key="frame" x="0.0" y="29" width="600" height="291"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="291" id="Qer-La-Hjb"/>
@@ -346,7 +346,13 @@
                             <constraint firstItem="P13-65-wqt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="mW2-Er-I90"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Timeline Feed" id="fAr-PY-wNB"/>
+                    <navigationItem key="navigationItem" title="Timeline Feed" id="fAr-PY-wNB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="nh0-MB-DiM">
+                            <connections>
+                                <action selector="onRefreshTapped:" destination="vXZ-lx-hvc" id="VXw-lO-KJq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="P13-65-wqt" id="FHI-BL-YxH"/>
                     </connections>
@@ -410,13 +416,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ZX-lm-Jkb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ZX-lm-Jkb">
                                 <rect key="frame" x="25" y="20" width="550" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="jSH-5k-T0S">
-                                        <variation key="widthClass=compact" constant="275"/>
+                                        <variation key="widthClass=compact" constant="303"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" constant="200" id="nC7-wN-ZXB"/>
+                                    <constraint firstAttribute="width" constant="200" id="nC7-wN-ZXB">
+                                        <variation key="widthClass=compact" constant="400"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
