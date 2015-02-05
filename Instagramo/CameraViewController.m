@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import "CameraViewController.h"
 
-@interface CameraViewController ()
+@interface CameraViewController () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *addPhotoImageView;
 @property (strong, nonatomic) IBOutlet UITextField *captionTextField;
@@ -25,6 +25,8 @@
 }
 
 - (IBAction)saveBarButtonItemTapped:(UIBarButtonItem *)sender {
+    [self showAlert];
+
     NSData* data = UIImageJPEGRepresentation(self.addPhotoImageView.image, 0.5f);
     PFFile *imageFile = [PFFile fileWithName:@"photo.jpeg" data: data];
     PFObject *photo = [PFObject objectWithClassName: @"Images"];
@@ -66,9 +68,14 @@
 }
 
 -(void)showAlert {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Savezies" message:@"You need to create an account before you can access this awesomeness. \n Es necesario crear una cuenta antes de poder acceder a esta genialidad. " delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save?!" message:@"Are you 100% sure that you want to share this awesomeness with the world? " delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
 
     [alert show];
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        NSLog(@"It's All Good");
+    }
 }
 
 
