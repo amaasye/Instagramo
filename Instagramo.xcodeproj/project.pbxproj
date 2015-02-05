@@ -178,30 +178,18 @@
 		B0E2BE971A80226D00F1C101 /* Instagramo */ = {
 			isa = PBXGroup;
 			children = (
-				F9C6998B1A8401C000A1A4FE /* CameraViewController.m */,
-				F9C6998C1A8401C000A1A4FE /* SearchViewController.m */,
-				F9C6998D1A8401C000A1A4FE /* ActivityViewController.m */,
-				F9C6998E1A8401C000A1A4FE /* FeedViewController.m */,
-				F9C6998F1A8401C000A1A4FE /* ProfileViewController.m */,
-				F9C699901A8401C000A1A4FE /* FeedTableViewCell.h */,
-				F9C699911A8401C000A1A4FE /* FeedTableViewCell.m */,
-				F9C699921A8401C000A1A4FE /* CameraViewController.h */,
-				F9C699931A8401C000A1A4FE /* FeedViewController.h */,
-				F9C699951A8401C000A1A4FE /* ProfileViewController.h */,
-				F9C699961A8401C000A1A4FE /* ActivityViewController.h */,
-				F9C699971A8401C000A1A4FE /* SearchViewController.h */,
 				B0E2BE9C1A80226D00F1C101 /* AppDelegate.h */,
 				B0E2BE9D1A80226D00F1C101 /* AppDelegate.m */,
 				B0D7F33C1A802A7F00205DE0 /* LoginViewController.h */,
 				B0D7F33D1A802A7F00205DE0 /* LoginViewController.m */,
 				B047DFF01A816C11000A2B69 /* RootViewController.h */,
 				B047DFF11A816C11000A2B69 /* RootViewController.m */,
+				F9C699901A8401C000A1A4FE /* FeedTableViewCell.h */,
+				F9C699911A8401C000A1A4FE /* FeedTableViewCell.m */,
 				F9C699711A82B58200A1A4FE /* TabBarController.h */,
 				F9C699721A82B58200A1A4FE /* TabBarController.m */,
-				B047DFFA1A83D012000A2B69 /* User.h */,
-				B047DFFB1A83D012000A2B69 /* User.m */,
-				F9C699741A82F2E000A1A4FE /* Photo.h */,
-				F9C699751A82F2E000A1A4FE /* Photo.m */,
+				F9C699A01A8403BD00A1A4FE /* Custom Classes */,
+				F9C6999F1A84039100A1A4FE /* Tab Bar View Controllers */,
 				F9DA477B1A8045210039FB9E /* Other View Controllers */,
 				B0E2BEA21A80226D00F1C101 /* Main.storyboard */,
 				B0E2BEA51A80226D00F1C101 /* Images.xcassets */,
@@ -235,6 +223,34 @@
 				B0E2BEB31A80226D00F1C101 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9C6999F1A84039100A1A4FE /* Tab Bar View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9C699921A8401C000A1A4FE /* CameraViewController.h */,
+				F9C6998B1A8401C000A1A4FE /* CameraViewController.m */,
+				F9C699971A8401C000A1A4FE /* SearchViewController.h */,
+				F9C6998C1A8401C000A1A4FE /* SearchViewController.m */,
+				F9C699961A8401C000A1A4FE /* ActivityViewController.h */,
+				F9C6998D1A8401C000A1A4FE /* ActivityViewController.m */,
+				F9C699931A8401C000A1A4FE /* FeedViewController.h */,
+				F9C6998E1A8401C000A1A4FE /* FeedViewController.m */,
+				F9C699951A8401C000A1A4FE /* ProfileViewController.h */,
+				F9C6998F1A8401C000A1A4FE /* ProfileViewController.m */,
+			);
+			name = "Tab Bar View Controllers";
+			sourceTree = "<group>";
+		};
+		F9C699A01A8403BD00A1A4FE /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B047DFFA1A83D012000A2B69 /* User.h */,
+				B047DFFB1A83D012000A2B69 /* User.m */,
+				F9C699741A82F2E000A1A4FE /* Photo.h */,
+				F9C699751A82F2E000A1A4FE /* Photo.m */,
+			);
+			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
 		F9DA477B1A8045210039FB9E /* Other View Controllers */ = {
