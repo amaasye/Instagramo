@@ -30,7 +30,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"activityCell"];
-
+    cell.textLabel.text = @"         ¡Funcionalidad Muy Pronto!";
     return cell;
 }
 

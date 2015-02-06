@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 #import "Comment.h"
 
 @class User;
@@ -20,6 +21,7 @@
 @property NSString *username;
 @property NSString *caption;
 @property NSString *comment;
+@property PFFile *imageFile;
 
 @property User *user;
 

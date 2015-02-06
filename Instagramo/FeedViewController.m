@@ -37,35 +37,33 @@
     self.photos = [NSMutableArray new];
 
     PFQuery *query = [PFQuery queryWithClassName:@"Images"];
-    dispatch_queue_t feedQueue = dispatch_queue_create("feedQueue", NULL);
+
+    [query orderByDescending:@"updatedAt"];
+//    query.limit = 100;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            dispatch_async(feedQueue, ^{
-                for (PFObject *object in objects) {
+        if (!error)
+        {
+                for (PFObject *object in objects)
+                {
+                    Photo *photo = [Photo new];
+                    photo.username =[object objectForKey:@"username"];
+                    photo.imageFile = [object objectForKey:@"imageFile"];
+                    photo.user = [[User alloc]initWithPFObject:[object objectForKey:@"user"]];
 
-                    PFFile *imageFile = [object objectForKey:@"imageFile"];
-                    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-
-                        UIImage *image = [UIImage imageWithData:data];
-                        Photo *photo = [Photo new];
-                        photo.image = image;
-                        photo.username =[object objectForKey:@"username"];
-                        photo.user = [[User alloc]initWithPFObject:[object objectForKey:@"user"]];
-                        photo.caption = [object objectForKey:@"caption"];
-                        [self.photos addObject:photo];
-
-                        [self.feedTableView reloadData];
-                    }];
+                    photo.caption = [object objectForKey:@"caption"];
+                    [self.photos addObject:photo];
                 }
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.feedTableView reloadData];
-                });
-            });
-        } else {
+
+            [self.feedTableView reloadData];
+        }
+        else
+        {
 
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
+
+        NSLog(@"here");
     }];
 //    NSLog(@"%lu", (unsigned long)self.photos.count);
 }
@@ -81,8 +79,17 @@
     FeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell"];
     Photo *photo = self.photos [indexPath.row];
 
+    [photo.imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+
+        UIImage *image = [UIImage imageWithData:data];
+        photo.image = image;
+
+        cell.picAddedImageView.image = image;
+    }];
+
+
     cell.usernameLabel.text = photo.username;
-    cell.picAddedImageView.image = photo.image;
+//    cell.picAddedImageView.image = photo.image;
     cell.commentTextView.text = photo.caption;
     
     return cell;

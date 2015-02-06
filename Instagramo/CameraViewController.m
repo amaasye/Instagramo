@@ -40,6 +40,8 @@
 
     [self.captionTextField resignFirstResponder];
     [photo saveInBackground];
+    self.captionTextField.text = @"";
+    self.addPhotoImageView.image = nil;
 }
 
 - (IBAction)takePhoto {

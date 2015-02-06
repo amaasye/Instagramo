@@ -37,7 +37,7 @@
     self.comments = [NSMutableArray new];
 
     PFQuery *query = [PFQuery queryWithClassName:@"Comments"];
-//    [query whereKey:@"Photo" equalTo:];
+    [query orderByDescending:@"createdAt"];
 //    dispatch_queue_t feedQueue = dispatch_queue_create("feedQueue", NULL);
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

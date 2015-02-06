@@ -33,37 +33,20 @@
     [self loadUser];
 }
 
-- (void) setImageView:(UIImageView *)imageView{
-    _imageView = imageView;
-    [self.imageView reloadInputViews];
-}
-
-- (void) setUsernameLabel:(UILabel *)usernameLabel{
-    _usernameLabel = usernameLabel;
-    [self.usernameLabel reloadInputViews];
-}
-
 - (void) loadUser{
-//    PFQuery *storePhoto = [user objectForKey:@"User"];
     PFQuery *queryUser = [PFUser query];
     [queryUser whereKey: @"username" equalTo:self.selectedUser.username];
 
     [queryUser getObjectInBackgroundWithId:self.selectedUser.objectId block:^(PFObject *object, NSError *error) {
         if (!error) {
-//            for (PFObject *object in object) {
-                PFFile *profilePic = [object objectForKey:@"profilePic"];
-                [profilePic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                    UIImage *image = [UIImage imageWithData:data];
-                    self.imageView.image = image;
-                    [self.imageView reloadInputViews];
-
-                }];
-//        }
+            PFFile *profilePic = [object objectForKey:@"profilePic"];
+            [profilePic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                UIImage *image = [UIImage imageWithData:data];
+                self.usernameLabel.text = [NSString stringWithFormat:@"%@",[[PFUser currentUser]valueForKey:@"username"]] ;
+                self.imageView.image = image;
+            }];
         }
     }];
-//    [queryUser findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        
-//    }];
 }
 
 - (IBAction)onFollowersLabelTapped:(UITapGestureRecognizer *)sender {

@@ -42,7 +42,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell"];
-
+    cell.textLabel.text = @"         ¡Funcionalidad Muy Pronto!";
     return cell;
 }
 
