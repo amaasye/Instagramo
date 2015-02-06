@@ -7,8 +7,9 @@
 //
 
 #import "SearchViewController.h"
+#import <Parse/Parse.h>
 
-@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *searchTableView;
@@ -18,6 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+}
+
+
+#pragma mark ------------------ SEARCHBAR DELEGATE --------------------------
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
+{
+        [searchBar performSelector:@selector(resignFirstResponder) withObject:nil afterDelay:0.1];
 
 }
 
