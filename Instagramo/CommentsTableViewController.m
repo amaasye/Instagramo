@@ -42,10 +42,10 @@
 //            dispatch_async(feedQueue, ^{
                 for (PFObject *object in objects) {
 
-                    Photo *photoPoster = [Photo new];
-                    photoPoster.comment =[object objectForKey:@"message"];
-                    photoPoster.username =[object objectForKey:@"username"];
-                    [self.comments addObject:photoPoster];
+                    Photo *commentPoster = [Photo new];
+                    commentPoster.comment =[object objectForKey:@"message"];
+                    commentPoster.username =[object objectForKey:@"username"];
+                    [self.comments addObject:commentPoster];
 
                     [self.commentTableView reloadData];
                 }
@@ -105,10 +105,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentsCell" forIndexPath:indexPath];
-    Photo *post = self.comments [indexPath.row];
+    Photo *comment = self.comments [indexPath.row];
 
-    cell.textLabel.text = post.username;
-    cell.detailTextLabel.text = post.comment;
+    cell.textLabel.text = comment.username;
+    cell.detailTextLabel.text = comment.comment;
 
     return cell;
 }

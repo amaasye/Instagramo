@@ -10,7 +10,8 @@
 #import <Parse/Parse.h>
 #import "Photo.h"
 
-@interface SelectedProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SelectedProfileViewController ()
+
 @property (strong, nonatomic) IBOutlet UILabel *followersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *followingsLabel;
 @property NSMutableArray *userDetails;
@@ -61,28 +62,6 @@
 }
 - (IBAction)onFollowButtonTapped:(UIButton *)sender {
     
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark ------------ COLLECTIONVIEW DELEGATE AND DATASOURCE ------------
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 1;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"selectedUserCell" forIndexPath:indexPath];
-
-    return cell;
 }
 
 @end

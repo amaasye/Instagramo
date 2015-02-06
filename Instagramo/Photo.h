@@ -13,6 +13,7 @@
 @interface Photo : NSObject
 
 @property UIImage *image;
+@property UIImage *profilePic;
 @property NSString *photoID;
 @property NSString *username;
 @property NSString *caption;

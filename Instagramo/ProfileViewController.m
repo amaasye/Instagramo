@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "FollowersTableViewController.h"
 #import "User.h"
+#import "Photo.h"
 
 
 @interface ProfileViewController ()
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *countFollowingsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+@property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 
 @end
 
@@ -25,8 +27,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self loadProfilePic];
 }
+
+- (void)loadProfilePic {
+
+    PFUser *currentUser = [PFUser currentUser];
+
+    if (currentUser) {
+        PFQuery *queryPhoto = [PFQuery queryWithClassName:@"User"];
+        [queryPhoto orderByAscending:@"updatedAt"];
+
+//        [queryPhoto whereKey:@"profilePic" equalTo:currentUser];
+        [queryPhoto findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            // Verify if there are no errors
+
+            if (!error) {
+                    for (PFObject *object in objects) {
+
+                // Set username
+                // Retrieve Photo
+
+                        PFFile *currentProfilePic = (PFFile *)[object objectForKey:@"profilePic"];
+                        [currentProfilePic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+
+                            UIImage *image = [UIImage imageWithData:data];
+                            self.profilePic.image = image;
+                            self.userNameLabel.text = [NSString stringWithFormat:@"%@",[[PFUser currentUser]valueForKey:@"username"]] ;
+
+                            [self.profilePic reloadInputViews];
+                            [self.userNameLabel reloadInputViews];
+                        }];
+                    }
+
+            } else {
+
+                NSString *errorString = [[error userInfo] objectForKey:@"error"];
+                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [errorAlertView show];
+
+            }
+//            [self.profilePic reloadInputViews];
+
+        }];
+    }
+}
+
 - (void)handlerGetFollowingInformation:(id)value {
 //    BOOL success = [Utility checkWebServiceErrors:value controller:self.navigationController];
 //
