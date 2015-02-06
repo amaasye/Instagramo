@@ -15,6 +15,7 @@
 @property NSString *password;
 @property NSString *emailAddress;
 @property UIImage *profilePic;
+
 @property NSArray *followers;
 @property NSArray *followings;
 

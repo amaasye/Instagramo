@@ -10,11 +10,13 @@
 #import "FeedViewController.h"
 #import "Photo.h"
 #import "FeedTableViewCell.h"
+#import "CommentsTableViewController.h"
+#import "SelectedProfileViewController.h"
 
 @interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *feedTableView;
-@property NSMutableArray *photos;
+@property (nonatomic) NSMutableArray *photos;
 
 @end
 
@@ -85,6 +87,28 @@
 
 - (IBAction)onRefreshTapped:(UIBarButtonItem *)sender {
     [self loadData];
+}
+
+#pragma mark ------------ Segue To Comment View ---------------------
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"commentSegue"]) {
+
+        CommentsTableViewController *commentVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.feedTableView indexPathForCell:sender];
+        Photo *photoPoster = self.photos[indexPath.row];
+        commentVC.photoPoster = photoPoster;
+        commentVC.title = photoPoster.username;
+
+    } else if ([segue.identifier isEqualToString:@"feedToUserSegue"]) {
+
+        SelectedProfileViewController *selectProfileVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.feedTableView indexPathForCell:sender];
+        Photo *selectedUser = self.photos[indexPath.row];
+        selectProfileVC.selectedUser = selectedUser;
+        selectedUser.image = selectedUser.image;
+        selectedUser.username = selectedUser.username;
+    }
 }
 
 @end

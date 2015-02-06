@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class Photo;
 @interface CommentsTableViewController : UITableViewController
+
+@property Photo *photoPoster;
 
 @end

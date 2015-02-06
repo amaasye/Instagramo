@@ -6,11 +6,14 @@
 //  Copyright (c) 2015 Syed, Kyle and JP. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "CommentsTableViewController.h"
+#import "Photo.h"
 
 @interface CommentsTableViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *commentTableView;
+@property (nonatomic) NSMutableArray *comments;
 
 @end
 
@@ -18,83 +21,96 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadComments];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) setComments:(NSMutableArray *)comments {
+    _comments = comments;
+    [self.commentTableView reloadInputViews];
+}
+
+- (void)loadComments {
+    self.comments = [NSMutableArray new];
+
+    PFQuery *query = [PFQuery queryWithClassName:@"Comments"];
+//    [query whereKey:@"Photo" equalTo:];
+//    dispatch_queue_t feedQueue = dispatch_queue_create("feedQueue", NULL);
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+//            dispatch_async(feedQueue, ^{
+                for (PFObject *object in objects) {
+
+                    Photo *photoPoster = [Photo new];
+                    photoPoster.comment =[object objectForKey:@"message"];
+                    photoPoster.username =[object objectForKey:@"username"];
+                    [self.comments addObject:photoPoster];
+
+                    [self.commentTableView reloadData];
+                }
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.commentTableView reloadData];
+//                });
+//            });
+        } else {
+
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
+- (IBAction)onAddButtonTapped:(UIBarButtonItem *)sender {
+
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"Post Comment" message:nil preferredStyle:UIAlertControllerStyleAlert];
+
+    [alertcontroller addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        nil;
+    }];
+
+    UIAlertAction *addAction = [UIAlertAction
+                               actionWithTitle:@"Add Comment"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   UITextField *commentTextField = alertcontroller.textFields.firstObject;
+
+                                   PFObject *comments = [PFObject objectWithClassName: @"Comments"];
+                                   PFUser *currentUser = [PFUser currentUser];
+
+                                   comments[@"username"] = currentUser.username;
+                                   comments[@"message"] = commentTextField.text;
+                                   NSLog(@"%@",commentTextField.text);
+                                   
+                                   [commentTextField resignFirstResponder];
+                                   [comments saveInBackground];
+//                                   [self loadComments];
+                               }];
+
+    [alertcontroller addAction:addAction];
+
+    [self presentViewController:alertcontroller animated:YES completion:^{
+        nil;
+    }];
+
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 0;
+
+    return self.comments.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentsCell" forIndexPath:indexPath];
+    Photo *post = self.comments [indexPath.row];
+
+    cell.textLabel.text = post.username;
+    cell.detailTextLabel.text = post.comment;
+
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

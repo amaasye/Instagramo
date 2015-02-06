@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Comment.h"
 
 @interface Photo : NSObject
 
@@ -15,5 +16,6 @@
 @property NSString *photoID;
 @property NSString *username;
 @property NSString *caption;
+@property NSString *comment;
 
 @end

@@ -42,6 +42,7 @@
 		F9C6999B1A8401C000A1A4FE /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998E1A8401C000A1A4FE /* FeedViewController.m */; };
 		F9C6999C1A8401C000A1A4FE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C6998F1A8401C000A1A4FE /* ProfileViewController.m */; };
 		F9C6999D1A8401C000A1A4FE /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699911A8401C000A1A4FE /* FeedTableViewCell.m */; };
+		F9C699A31A842C4E00A1A4FE /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C699A21A842C4E00A1A4FE /* Comment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		F9C699951A8401C000A1A4FE /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		F9C699961A8401C000A1A4FE /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		F9C699971A8401C000A1A4FE /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F9C699A11A842C4E00A1A4FE /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		F9C699A21A842C4E00A1A4FE /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +252,8 @@
 				B047DFFB1A83D012000A2B69 /* User.m */,
 				F9C699741A82F2E000A1A4FE /* Photo.h */,
 				F9C699751A82F2E000A1A4FE /* Photo.m */,
+				F9C699A11A842C4E00A1A4FE /* Comment.h */,
+				F9C699A21A842C4E00A1A4FE /* Comment.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				F9C6999B1A8401C000A1A4FE /* FeedViewController.m in Sources */,
 				F9C6999A1A8401C000A1A4FE /* ActivityViewController.m in Sources */,
 				B0E2BE9B1A80226D00F1C101 /* main.m in Sources */,
+				F9C699A31A842C4E00A1A4FE /* Comment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,15 @@
 //
 
 #import "SelectedProfileViewController.h"
+#import <Parse/Parse.h>
+#import "Photo.h"
 
 @interface SelectedProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *followersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *followingsLabel;
+@property NSMutableArray *userDetails;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 
 @end
 
@@ -18,8 +23,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self loadUser];
 }
+
+- (void) setImageView:(UIImageView *)imageView{
+    _imageView = imageView;
+    [self.imageView reloadInputViews];
+}
+
+- (void) setUsernameLabel:(UILabel *)usernameLabel{
+    _usernameLabel = usernameLabel;
+    [self.usernameLabel reloadInputViews];
+}
+
+- (void) loadUser{
+    Photo *selectedUser = [Photo new];
+    selectedUser.image = self.selectedUser.image;
+    self.imageView.image = selectedUser.image;
+
+    selectedUser.username = self.selectedUser.username;
+    self.usernameLabel.text = selectedUser.username;
+}
+
 - (IBAction)onFollowersLabelTapped:(UITapGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:self.view];
     if (CGRectContainsPoint(self.followersLabel.frame, point)) {

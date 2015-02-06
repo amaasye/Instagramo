@@ -278,7 +278,7 @@
                                                         <constraint firstAttribute="height" constant="25" id="Xb3-cr-PEf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <state key="normal" title="Comment 💬">
+                                                    <state key="normal" title="Comments 💬">
                                                         <color key="titleColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -527,7 +527,7 @@
                         <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentsCell" textLabel="5fc-4Z-ZrF" rowHeight="80" style="IBUITableViewCellStyleDefault" id="6GV-0r-8sE">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentsCell" textLabel="5fc-4Z-ZrF" detailTextLabel="oI4-yh-kct" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="6GV-0r-8sE">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6GV-0r-8sE" id="SmR-Ul-8fY">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -535,10 +535,19 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5fc-4Z-ZrF">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.38823529410000002" green="0.27450980390000002" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact">
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oI4-yh-kct">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             </variation>
                                         </label>
                                     </subviews>
@@ -557,6 +566,9 @@
                     <navigationItem key="navigationItem" title="Comments" id="Nb8-Y4-rc5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mgB-6b-J7G">
                             <color key="tintColor" red="0.38823529410000002" green="0.27450980390000002" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onAddButtonTapped:" destination="mta-vX-NZ2" id="RxB-go-Uuf"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -823,28 +835,6 @@
                                     <outletCollection property="gestureRecognizers" destination="WTD-q2-u7J" appends="YES" id="MRX-R6-WBj"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsF-wq-5py">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Ier-AB-d9V"/>
-                                    <constraint firstAttribute="width" constant="170" id="Kx8-C5-yXr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ier-AB-d9V"/>
-                                        <exclude reference="Kx8-C5-yXr"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Ier-AB-d9V"/>
-                                        <include reference="Kx8-C5-yXr"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-jo-8jp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.1843137255" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -918,6 +908,32 @@
                                     <outlet property="delegate" destination="KO6-23-jUu" id="VXc-Sb-FKo"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsF-wq-5py">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ier-AB-d9V">
+                                        <variation key="widthClass=compact" constant="24"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="170" id="Kx8-C5-yXr">
+                                        <variation key="widthClass=compact" constant="154"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ier-AB-d9V"/>
+                                        <exclude reference="Kx8-C5-yXr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ier-AB-d9V"/>
+                                        <include reference="Kx8-C5-yXr"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.69411764710000001" green="0.62745098040000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -939,7 +955,9 @@
                             </constraint>
                             <constraint firstItem="bsF-wq-5py" firstAttribute="top" secondItem="3u4-jo-8jp" secondAttribute="bottom" constant="8" id="dm2-Pj-FDJ"/>
                             <constraint firstItem="RuE-s1-bWK" firstAttribute="leading" secondItem="7ox-dn-wcO" secondAttribute="trailing" constant="8" id="ffW-Qd-iHG"/>
-                            <constraint firstItem="bsF-wq-5py" firstAttribute="leading" secondItem="HYN-cE-PX9" secondAttribute="leadingMargin" constant="-16" id="hAT-Pg-B4E"/>
+                            <constraint firstItem="bsF-wq-5py" firstAttribute="leading" secondItem="HYN-cE-PX9" secondAttribute="leadingMargin" constant="-16" id="hAT-Pg-B4E">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="3u4-jo-8jp" firstAttribute="top" secondItem="RuE-s1-bWK" secondAttribute="bottom" id="jSS-3V-Qfd"/>
                             <constraint firstItem="ZOm-J7-iMo" firstAttribute="top" secondItem="bsF-wq-5py" secondAttribute="bottom" constant="17" id="p8z-TC-u9l"/>
                             <constraint firstItem="3u4-jo-8jp" firstAttribute="leading" secondItem="nDS-Mq-Spc" secondAttribute="trailing" id="qH3-Ae-nb2"/>
@@ -949,9 +967,9 @@
                                 <exclude reference="nDS-Mq-Spc"/>
                                 <exclude reference="7ox-dn-wcO"/>
                                 <exclude reference="RuE-s1-bWK"/>
-                                <exclude reference="bsF-wq-5py"/>
                                 <exclude reference="3u4-jo-8jp"/>
                                 <exclude reference="ZOm-J7-iMo"/>
+                                <exclude reference="bsF-wq-5py"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="8WM-At-hWu"/>
@@ -975,9 +993,9 @@
                                 <include reference="nDS-Mq-Spc"/>
                                 <include reference="7ox-dn-wcO"/>
                                 <include reference="RuE-s1-bWK"/>
-                                <include reference="bsF-wq-5py"/>
                                 <include reference="3u4-jo-8jp"/>
                                 <include reference="ZOm-J7-iMo"/>
+                                <include reference="bsF-wq-5py"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="8WM-At-hWu"/>
@@ -1001,6 +1019,8 @@
                     <connections>
                         <outlet property="followersLabel" destination="7ox-dn-wcO" id="NHo-5Q-Fnc"/>
                         <outlet property="followingsLabel" destination="RuE-s1-bWK" id="6P9-KI-yBi"/>
+                        <outlet property="imageView" destination="nDS-Mq-Spc" id="NjE-2x-Aq4"/>
+                        <outlet property="usernameLabel" destination="bsF-wq-5py" id="KEu-LI-6m2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPJ-CZ-p3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1517,7 +1537,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="vCm-r9-jjs"/>
         <segue reference="ey4-oS-Pqq"/>
-        <segue reference="ALv-aJ-Xyo"/>
+        <segue reference="jG8-IN-ArM"/>
         <segue reference="oog-TM-kJq"/>
         <segue reference="fkM-GP-VkQ"/>
     </inferredMetricsTieBreakers>
