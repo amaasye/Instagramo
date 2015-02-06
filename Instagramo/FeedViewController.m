@@ -25,10 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
+//    [self loadData];
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self loadData];
+}
 
 - (void)loadData{
     self.photos = [NSMutableArray new];
@@ -99,8 +102,8 @@
         CommentsTableViewController *commentVC = segue.destinationViewController;
         NSIndexPath *indexPath = [self.feedTableView indexPathForCell:sender];
         Photo *photoPoster = self.photos[indexPath.row];
-        commentVC.photoPoster = photoPoster;
-        commentVC.title = photoPoster.username;
+        commentVC.photoPoster = photoPoster.user;
+        commentVC.photoPoster.objectId = photoPoster.photoID;
 
     } else if ([segue.identifier isEqualToString:@"feedToUserSegue"]) {
 

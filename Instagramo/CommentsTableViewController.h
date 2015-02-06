@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class Photo;
+@class User;
 @interface CommentsTableViewController : UITableViewController
 
-@property Photo *photoPoster;
+@property User *photoPoster;
 
 @end

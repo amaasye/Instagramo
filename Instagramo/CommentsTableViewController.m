@@ -21,8 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadComments];
+}
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self loadComments];
 }
 
 - (void) setComments:(NSMutableArray *)comments {
@@ -45,6 +48,7 @@
                     Photo *commentPoster = [Photo new];
                     commentPoster.comment =[object objectForKey:@"message"];
                     commentPoster.username =[object objectForKey:@"username"];
+                    commentPoster.photoID = [object objectForKey:@"comments"];
                     [self.comments addObject:commentPoster];
 
                     [self.commentTableView reloadData];
@@ -84,13 +88,12 @@
                                    
                                    [commentTextField resignFirstResponder];
                                    [comments saveInBackground];
-//                                   [self loadComments];
                                }];
 
     [alertcontroller addAction:addAction];
 
     [self presentViewController:alertcontroller animated:YES completion:^{
-        nil;
+        [self loadComments];
     }];
 
 }

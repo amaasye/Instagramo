@@ -41,12 +41,6 @@
 
     if (currentUser) {
         PFQuery *userQuery = [PFUser query];
-        //        [queryPhoto orderByAscending:@"updatedAt"];
-
-        //            [queryPhoto whereKey:@"profilePic" equalTo:@"photo.jpeg"];
-
-        //        [queryPhoto whereKey:@"pro®filePic" equalTo:currentUser];
-
 
         [userQuery getObjectInBackgroundWithId:currentUser.objectId block:^(PFObject *object, NSError *error) {
 

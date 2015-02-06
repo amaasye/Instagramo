@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class Photo;
 @interface Comment : NSObject
 
 @property NSString *comment;
 @property NSString *commentor;
+
+@property Photo *photo;
 
 @end
