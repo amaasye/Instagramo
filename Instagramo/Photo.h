@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "Comment.h"
 
+@class User;
+
 @interface Photo : NSObject
 
 @property UIImage *image;
@@ -18,5 +20,7 @@
 @property NSString *username;
 @property NSString *caption;
 @property NSString *comment;
+
+@property User *user;
 
 @end

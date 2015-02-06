@@ -27,6 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //    [self loadProfilePic];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
     [self loadProfilePic];
 }
 
@@ -35,31 +40,29 @@
     PFUser *currentUser = [PFUser currentUser];
 
     if (currentUser) {
-        PFQuery *queryPhoto = [PFQuery queryWithClassName:@"User"];
-        [queryPhoto orderByAscending:@"updatedAt"];
+        PFQuery *userQuery = [PFUser query];
+        //        [queryPhoto orderByAscending:@"updatedAt"];
 
-//        [queryPhoto whereKey:@"profilePic" equalTo:currentUser];
-        [queryPhoto findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            // Verify if there are no errors
+        //            [queryPhoto whereKey:@"profilePic" equalTo:@"photo.jpeg"];
+
+        //        [queryPhoto whereKey:@"pro®filePic" equalTo:currentUser];
+
+
+        [userQuery getObjectInBackgroundWithId:currentUser.objectId block:^(PFObject *object, NSError *error) {
 
             if (!error) {
-                    for (PFObject *object in objects) {
 
-                // Set username
-                // Retrieve Photo
+                PFFile *currentProfilePic = (PFFile *)[object objectForKey:@"profilePic"];
 
-                        PFFile *currentProfilePic = (PFFile *)[object objectForKey:@"profilePic"];
-                        [currentProfilePic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                [currentProfilePic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
 
-                            UIImage *image = [UIImage imageWithData:data];
-                            self.profilePic.image = image;
-                            self.userNameLabel.text = [NSString stringWithFormat:@"%@",[[PFUser currentUser]valueForKey:@"username"]] ;
+                    UIImage *image = [UIImage imageWithData:data];
+                    self.profilePic.image = image;
+                    self.userNameLabel.text = [NSString stringWithFormat:@"%@",[[PFUser currentUser]valueForKey:@"username"]] ;
 
-                            [self.profilePic reloadInputViews];
-                            [self.userNameLabel reloadInputViews];
-                        }];
-                    }
-
+                    //                            [self.profilePic reloadInputViews];
+                    [self.userNameLabel reloadInputViews];
+                }];
             } else {
 
                 NSString *errorString = [[error userInfo] objectForKey:@"error"];
@@ -67,20 +70,18 @@
                 [errorAlertView show];
 
             }
-//            [self.profilePic reloadInputViews];
-
         }];
     }
 }
 
 - (void)handlerGetFollowingInformation:(id)value {
-//    BOOL success = [Utility checkWebServiceErrors:value controller:self.navigationController];
-//
-//    if (success) {
-        User *friend = (User *)value;
+    //    BOOL success = [Utility checkWebServiceErrors:value controller:self.navigationController];
+    //
+    //    if (success) {
+//    User *friend = (User *)value;
 
-        self.followingFriendsArray = [[NSArray alloc] initWithArray:friend.followings];
-        self.followerFriendsArray = [[NSArray alloc] initWithArray:friend.followers];
+//    self.followingFriendsArray = [[NSArray alloc] initWithArray:friend.followings];
+//    self.followerFriendsArray = [[NSArray alloc] initWithArray:friend.followers];
 
 }
 
@@ -118,11 +119,11 @@
 }
 
 - (void)logOutUser {
-        if ([PFUser currentUser]) {
-            [PFUser logOut];
-        } else {
-            NSLog(@"currentUser: %@", [PFUser currentUser]);
-        }
+    if ([PFUser currentUser]) {
+        [PFUser logOut];
+    } else {
+        NSLog(@"currentUser: %@", [PFUser currentUser]);
+    }
 }
 
 
@@ -134,7 +135,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PicsAddedCell" forIndexPath:indexPath];
-
+    
     return cell;
 }
 

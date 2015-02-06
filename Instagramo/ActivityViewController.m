@@ -10,6 +10,7 @@
 
 @interface ActivityViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *activityTableView;
+@property NSMutableArray *activityArray;
 
 @end
 

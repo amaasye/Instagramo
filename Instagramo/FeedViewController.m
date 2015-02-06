@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 #import "FeedViewController.h"
 #import "Photo.h"
+#import "User.h"
 #import "FeedTableViewCell.h"
 #import "CommentsTableViewController.h"
 #import "SelectedProfileViewController.h"
@@ -47,6 +48,7 @@
                         Photo *photo = [Photo new];
                         photo.image = image;
                         photo.username =[object objectForKey:@"username"];
+                        photo.user = [[User alloc]initWithPFObject:[object objectForKey:@"user"]];
                         photo.caption = [object objectForKey:@"caption"];
                         [self.photos addObject:photo];
 
@@ -104,10 +106,8 @@
 
         SelectedProfileViewController *selectProfileVC = segue.destinationViewController;
         NSIndexPath *indexPath = [self.feedTableView indexPathForCell:sender];
-        Photo *selectedUser = self.photos[indexPath.row];
-        selectProfileVC.selectedUser = selectedUser;
-        selectedUser.image = selectedUser.image;
-        selectedUser.username = selectedUser.username;
+        Photo *selectedPhoto = self.photos[indexPath.row];
+        selectProfileVC.selectedUser = selectedPhoto.user;
     }
 }
 

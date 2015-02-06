@@ -8,16 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface User : NSObject
 
+//@property PFObject *object;
+//@property NSString *username;
+//@property NSString *password;
+//@property NSString *emailAddress;
+//@property UIImage *profilePic;
+//
+//@property NSArray *followers;
+//@property NSArray *followings;
+
+@property NSString *objectId;
 @property NSString *username;
-@property NSString *password;
-@property NSString *emailAddress;
-@property UIImage *profilePic;
 
-@property NSArray *followers;
-@property NSArray *followings;
-
+- (instancetype)initWithPFObject:(PFObject *)object;
 
 @end

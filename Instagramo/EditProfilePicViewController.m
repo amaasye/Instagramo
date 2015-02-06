@@ -22,13 +22,22 @@
 }
 
 - (IBAction)onSaveTapped:(UIBarButtonItem *)sender {
-    NSData *imageData = UIImagePNGRepresentation(self.profilePic.image);
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-    [imageFile saveInBackground];
+    NSData* data = UIImageJPEGRepresentation(self.profilePic.image, 0.5f);
+    PFFile *imageFile = [PFFile fileWithName:@"photo.jpeg" data: data];
+//    PFObject *object = [PFObject objectWithClassName: @"User"];
+    PFUser *currentUser = [PFUser currentUser];
 
-    PFUser *user = [PFUser currentUser];
-    [user setObject:imageFile forKey:@"profilePic"];
-    [user saveInBackground];
+    currentUser[@"profilePic"] = imageFile;
+    currentUser[@"username"] = currentUser.username;
+
+    [currentUser saveInBackground];
+//    NSData *imageData = UIImagePNGRepresentation(self.profilePic.image);
+//    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+//    [imageFile saveInBackground];
+//
+//    PFUser *user = [PFUser currentUser];
+//    [user setObject:imageFile forKey:@"profilePic"];
+//    [user saveInBackground];
 }
 
 - (IBAction)onEditProfilePicTapped:(UIButton *)sender {

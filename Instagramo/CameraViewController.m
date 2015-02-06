@@ -34,6 +34,7 @@
 
     photo[@"imageFile"] = imageFile;
     photo[@"username"] = currentUser.username;
+    photo[@"user"] = currentUser;
     photo[@"caption"] = self.captionTextField.text;
     NSLog(@"%@",self.captionTextField.text);
 

@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class Photo;
+@class User;
 @interface SelectedProfileViewController : UIViewController
 
-@property Photo *selectedUser;
+@property User *selectedUser;
 
 @end
